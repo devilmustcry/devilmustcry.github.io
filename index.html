@@ -121,9 +121,7 @@
     $("#menu_block").hide();
     $("#game_canvas").show();
     catagory = event.target.id
-    console.log(catagory)
     questions = fetchQuestions(catagory)
-    console.log(questions)
     questionIndexString = randomQuestions()
 
     onStartQuestion(questions[questionIndexString[questionNo]])
@@ -172,7 +170,6 @@
   }
   function fetchQuestions(catagory) {
     let copy = allQuestion[catagory].slice()
-    console.log(copy)
     let questions = []
     for(let i = 0; i< numberOfQuestions; i++) {
       let index = Math.floor(Math.random() * copy.length)
